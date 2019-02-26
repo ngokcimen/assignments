@@ -23,4 +23,10 @@ public class TestUtil {
   public void arraySizeNotOne(){
     assertFalse(c.compute(new int[2]));
   }
+
+  @Test(expected = RuntimeException.class)
+  public void arraySizeNotDivbyTwo(){
+    int[] arr = {0, 1, 2};
+    c.compute(arr);
+  }
 }
