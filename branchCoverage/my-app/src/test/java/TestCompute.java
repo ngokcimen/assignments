@@ -40,4 +40,17 @@ public class TestCompute {
     when(c.mq.contains(e)).thenReturn(true);
     assertEquals(0, c.countNumberOfOccurrences(e));
   }
+
+  @Test
+  public void thirdIf() {
+    MessageQueue mq = mock(MessageQueue.class);
+    c = new Compute(mq);
+    String e = "1";
+    when(c.mq.size()).thenReturn(3);
+    when(c.mq.contains(e)).thenReturn(true);
+    when(c.mq.getAt(0)).thenReturn(e);
+    when(c.mq.getAt(1)).thenReturn(e);
+    when(c.mq.getAt(2)).thenReturn(e);
+    assertEquals(3, c.countNumberOfOccurrences(e));
+  }
 }
