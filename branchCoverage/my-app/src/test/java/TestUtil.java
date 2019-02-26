@@ -35,4 +35,10 @@ public class TestUtil {
     int[] arr = {2, 1, 2};
     assertTrue(c.compute(arr));
   }
+
+  @Test
+  public void notDivisible(){
+    int[] arr = {2, 3, 2};
+    assertFalse(c.compute(arr));
+  }
 }
