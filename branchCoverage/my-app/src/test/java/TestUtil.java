@@ -18,4 +18,9 @@ public class TestUtil {
   public void arraySizeOne(){
     assertFalse(c.compute(new int[1]));
   }
+
+  @Test
+  public void arraySizeNotOne(){
+    assertFalse(c.compute(new int[2]));
+  }
 }
