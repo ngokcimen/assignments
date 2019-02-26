@@ -29,4 +29,10 @@ public class TestUtil {
     int[] arr = {0, 1, 2};
     c.compute(arr);
   }
+
+  @Test
+  public void divisible(){
+    int[] arr = {2, 1, 2};
+    assertTrue(c.compute(arr));
+  }
 }
